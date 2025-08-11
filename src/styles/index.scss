@@ -13,6 +13,7 @@ a {
   font-weight: 500;
   text-decoration: inherit;
   color: var(--textPrimary);
+  letter-spacing: 0.1rem;
 
   :hover {
     color: var(--accentPrimary);
@@ -29,6 +30,13 @@ body {
 
 h1, h2, h3 {
   font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+p {
+  max-width: 70ch;
+  padding: 1rem;
+  letter-spacing: 0.07rem;
 }
 
 
@@ -43,7 +51,7 @@ button {
   transition: border-color 0.25s;
 
   :hover {
-    // border-color: #646cff;
+    border-color: #646cff;
   }
 
   :focus,
