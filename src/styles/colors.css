@@ -1,0 +1,20 @@
+
+:root {
+  --textPrimary: #494949;
+  --textSecondary: #7f8287;
+  --bgPrimary: #f4f4f4;
+  --bgSecondary: #ffffff;
+  --accentPrimary: #265aa5;
+  --accentSecondary: #ffc5bb;
+  --border: #cccccc;
+}
+
+.dark {
+  --textPrimary: #b0b3b7;
+  --textSecondary: #8a8a8a;
+  --bgPrimary: #000000;
+  --bgSecondary: #1e1e1f;
+  --accentPrimary: #ffffff;
+  --accentSecondary: #fffffc;
+  --border: #444444;
+}

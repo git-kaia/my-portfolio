@@ -4,13 +4,13 @@ import ThemeToggle from "./ThemeToggle";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-white shadow-md px-6 py-4 flex gap-6 items-center">
-      <div className="flex gap-6 flex-1 justify-center">
+    <nav className="bg-[var(--bgSecondary)] shadow-md px-6 py-4 flex gap-6 items-center dark:shadow-none">
+      <div className="flex gap-6 flex-1 justify-center max-w-">
         <NavLink
           to="/"
           end
           className={({ isActive }) =>
-            isActive ? "font-bold text-lg text-primaryBlue" : "text-lg"
+            isActive ? "font-bold text-lg text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-lg"
           }
         >
           Home
@@ -19,7 +19,7 @@ export const Navbar = () => {
           to="/about"
           end
           className={({ isActive }) =>
-            isActive ? "font-bold text-lg text-primaryBlue" : "text-lg"
+            isActive ? "font-bold text-lg text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-lg"
           }
         >
           About
@@ -28,7 +28,7 @@ export const Navbar = () => {
           to="/projects"
           end
           className={({ isActive }) =>
-            isActive ? "font-bold text-lg text-primaryBlue" : "text-lg"
+            isActive ? "font-bold text-lg text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-lg"
           }
         >
           Projects
@@ -37,7 +37,7 @@ export const Navbar = () => {
           to="/contact"
           end
           className={({ isActive }) =>
-            isActive ? "font-bold text-lg text-primaryBlue" : "text-lg"
+            isActive ? "font-bold text-lg text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-lg"
           }
         >
           Contact

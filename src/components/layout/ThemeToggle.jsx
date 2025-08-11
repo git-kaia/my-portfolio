@@ -1,8 +1,8 @@
 // components/layout/ThemeToggle.jsx
 
 import { useEffect, useState } from "react";
-import SunIcon from '../../assets/icons/sun.svg?component';
-import MoonIcon from '../../assets/icons/moon.svg?component';
+import SunIcon from '../icons/SunIcon';
+import MoonIcon from '../icons/MoonIcon';
 
 console.log('SunIcon:', SunIcon);
 console.log('MoonIcon:', MoonIcon);
@@ -44,9 +44,9 @@ export default function ThemeToggle() {
       className="w-10 h-10 p-0 bg-transparent border-none"
     >
       {isDark ? (
-        <img className="max-w-full object-contain block" src={SunIcon} alt="Sun icon" />
+        <SunIcon className="max-w-full object-contain block" />
       ) : (
-        <img className="max-w-[80%] object-contain block" src={MoonIcon} alt="Moon icon" />
+        <MoonIcon className="max-w-[80%] object-contain block"/>
       )}
     </button>
   );

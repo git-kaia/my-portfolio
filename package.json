@@ -10,7 +10,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "generate:colors": "node scripts/generateCssVars.js",
+    "generate:tailwind-colors": "node scripts/generateTailwindColors.js",
+    "watch:colors": "nodemon --watch src/styles/colors.js --exec \"npm run generate:colors\""
   },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -36,6 +39,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
+    "nodemon": "^3.1.10",
     "postcss": "^8.5.6",
     "prettier": "^3.5.3",
     "sass": "^1.89.2",

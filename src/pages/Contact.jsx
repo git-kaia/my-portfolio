@@ -1,5 +1,5 @@
 // pages/Contact.jsx
-import EmailIcon from '../assets/icons/email.svg';
+import EmailIcon from '../components/icons/EmailIcon';
 
 const email = "kaja.berg@outlook.com";
 
@@ -11,9 +11,9 @@ export default function Contact() {
       </h1>
       <a
         href={`mailto:${email}`}
-        className="p-5 flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
+        className="p-5 flex items-center gap-2 transition-colors"
       >
-        <img className="w-10 object-contain" src={EmailIcon} alt="Email icon" />
+        <EmailIcon className="w-10 object-contain" />
         <span>{email}</span>
       </a>
     </section>

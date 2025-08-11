@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/layout/navbar";
-import { Footer } from "./components/layout/footer";
+import { Navbar } from "./components/layout/Navbar";
+import { Footer } from "./components/layout/Footer";
 
 // Pages
 import Home from "./pages/Home";
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-bg text-text min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">
           <Routes>
