@@ -14,9 +14,9 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
+      <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
+        <Navbar className="sticky"/>
+        <main className="overflow-y-auto">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -24,7 +24,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <Footer />
+        <Footer className="sticky"/>
       </div>
     </>
   );

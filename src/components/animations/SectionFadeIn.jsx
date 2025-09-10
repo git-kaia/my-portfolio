@@ -1,20 +1,21 @@
 // components/animations/SectionFadeIn.jsx
 
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import useInView from "../../hooks/useInView";
 
-export default function SectionFadeIn({ children }) {
-    const { ref, inView } = useInView({
+export default function SectionFadeIn({ children, className }) {
+    const { ref, isInView } = useInView({
         triggerOnce: false,
-        threshold: 0.1
+        threshold: 0.5
     });
 
     return (
         <motion.div
             ref={ref}
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
+            className={className}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1} : {}}
+            transition={{ duration: 1 }}
         >
             {children}
         </motion.div>

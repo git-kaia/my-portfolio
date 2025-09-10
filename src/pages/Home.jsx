@@ -1,15 +1,15 @@
 // pages/Home.jsx
-import SectionFadeIn from "../components/animations/SectionFadeIn"
+import SectionFadeIn from "../components/animations/SectionFadeIn";
 
 export default function Home() {
-    return (
-        <section className="pt-40">
-            <SectionFadeIn>
-                <h1 className="p-5 text-4xl font-sans text-[var(--accentPrimary)] uppercase tracking-widest text-center">Kaja Emilie Berg</h1>
-                <h2 className="text-xl text-[var(--textSecondary)] font-arial uppercase text-center">Full-stack developer</h2>
-            </SectionFadeIn>
-        </section>
-    )
+  return (
+    <SectionFadeIn className="h-full flex flex-col items-center justify-center">
+      <h1 className="p-5 text-5xl font-sans text-[var(--accentPrimary)] uppercase tracking-widest">
+        Kaja Emilie Berg
+      </h1>
+      <h2 className="text-2xl text-[var(--textSecondary)] font-arial uppercase">
+        Full-stack web developer
+      </h2>
+    </SectionFadeIn>
+  );
 }
-
-
