@@ -44,7 +44,7 @@ export const Navbar = () => {
         </NavLink>
       </div>
 
-      <div className="flex-0">
+      <div className="flex p-0 m-0 justfy-center align-center">
         <ThemeToggle />
       </div>
     </nav>
