@@ -7,12 +7,12 @@ export const Footer = () => {
       className="
     bg-[var(--bgSecondary)] 
     shadow-[0_-4px_6px_rgba(0,0,0,0.1)] 
-    px-4 py-2 
-    flex gap-6 items-center justify-center 
+    px-4 py-0.5 
+    flex gap-6 items-center justify-left 
     dark:shadow-none"
     >
       <div>
-        <p>© 2025 Kaja Emilie Berg</p>
+        <p className="text-xs p-1.5">© 2025 Kaja Emilie Berg</p>
       </div>
     </footer>
   );

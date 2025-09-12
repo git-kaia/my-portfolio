@@ -4,7 +4,7 @@ import ThemeToggle from "./ThemeToggle";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-[var(--bgSecondary)] shadow-md px-6 py-4 flex gap-6 items-center dark:shadow-none">
+    <nav className="bg-[var(--bgSecondary)] shadow-md px-6 py-1 flex gap-6 items-center dark:shadow-none">
       <div className="flex gap-6 flex-1 justify-center max-w-">
         <NavLink
           to="/"
