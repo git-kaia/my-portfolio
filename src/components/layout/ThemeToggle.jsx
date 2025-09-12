@@ -1,14 +1,11 @@
 // components/layout/ThemeToggle.jsx
 
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import SunIcon from '../icons/SunIcon';
 import MoonIcon from '../icons/MoonIcon';
 
-console.log('SunIcon:', SunIcon);
-console.log('MoonIcon:', MoonIcon);
-
 export default function ThemeToggle() {
-  // Check initial theme (optional: read from localStorage or prefers-color-scheme)
   const [isDark, setIsDark] = useState(() =>
     document.documentElement.classList.contains("dark")
   );
@@ -42,12 +39,32 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       aria-label="Toggle Dark Mode"
       className="w-10 h-10 p-0 bg-transparent border-none"
+      animate={{}}
     >
-      {isDark ? (
-        <SunIcon className="max-w-full object-contain block" />
-      ) : (
-        <MoonIcon className="max-w-[80%] object-contain block"/>
-      )}
-    </button>
+      <AnimatePresence mode="wait">
+        {isDark ? (
+          <motion.div
+            key="sun"
+            initial={{ opacity: 0, rotate: 90 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            exit={{ opacity: 0}}
+            transition={{ duration: 0.4 }}
+          >
+            <SunIcon className="max-w-full object-contain block" />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="moon"
+            initial={{ opacity: 0, rotate: -90 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <MoonIcon className="max-w-[80%] object-contain block" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </button >
   );
 }
+
