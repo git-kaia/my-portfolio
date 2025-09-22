@@ -24,7 +24,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <Footer className="sticky"/>
+        {/* <Footer className="sticky"/> */}
       </div>
     </>
   );
