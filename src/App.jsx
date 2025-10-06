@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/layout/Navbar";
-import { Footer } from "./components/layout/Footer";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 // Pages
 import Home from "./pages/Home";
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
-        <Navbar className="sticky"/>
+        <Header className="sticky"/>
         <main className="overflow-y-auto">
           <Routes>
             <Route path="/" element={<Home />} />

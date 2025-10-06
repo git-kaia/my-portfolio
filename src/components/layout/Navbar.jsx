@@ -1,11 +1,9 @@
 // components/layout/Navbar.jsx
 import { NavLink } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
 
-export const Navbar = () => {
+export default function Navbar() {
   return (
-    <nav className="bg-[var(--bgSecondary)] shadow-md px-6 py-1 flex gap-6 items-center dark:shadow-none">
-      <div className="flex gap-6 flex-1 justify-center">
+    <nav className="flex gap-6 flex-1 justify-center">
         <NavLink
           to="/"
           end
@@ -42,11 +40,6 @@ export const Navbar = () => {
         >
           Contact
         </NavLink>
-      </div>
-
-      <div className="flex p-0 m-0 justfy-center align-center">
-        <ThemeToggle />
-      </div>
     </nav>
   );
 };

@@ -1,7 +1,7 @@
 // components/layout/Footer.jsx
 import { FaGithub, FaEnvelope } from "react-icons/fa";
 
-export const Footer = () => {
+export default function Footer() {
   return (
     <footer
       className="

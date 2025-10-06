@@ -1,6 +1,6 @@
 // pages/About.jsx
-import SectionFadeIn from "../components/animations/SectionFadeIn";
-import ScrollTriangle from "../components/animations/ScrollTriangle";
+import SectionFadeIn from "../animations/section-animations/SectionFadeIn";
+import ScrollIndicator from "../components/ui/ScrollIndicator";
 
 export default function About() {
     return (
@@ -16,7 +16,7 @@ export default function About() {
                     more about me.{" "}
                 </p>
 
-                <ScrollTriangle />
+                <ScrollIndicator />
 
             </SectionFadeIn>
             <SectionFadeIn className="h-full flex flex-col items-center justify-center p-5">

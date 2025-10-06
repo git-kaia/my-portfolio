@@ -1,5 +1,5 @@
 // pages/Home.jsx
-import SectionFadeIn from "../components/animations/SectionFadeIn";
+import SectionFadeIn from "../animations/section-animations/SectionFadeIn";
 
 export default function Home() {
   return (

@@ -6,7 +6,7 @@ import useInView from "../../hooks/useInView";
 export default function SectionFadeIn({ children, className }) {
     const { ref, isInView } = useInView({
         triggerOnce: false,
-        threshold: 0.5
+        threshold: 0.2
     });
 
     return (

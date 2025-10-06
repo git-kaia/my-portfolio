@@ -1,6 +1,6 @@
 // pages/Contact.jsx
 import EmailIcon from "../components/icons/EmailIcon";
-import SectionFadeIn from "../components/animations/SectionFadeIn";
+import SectionFadeIn from "../animations/section-animations/SectionFadeIn";
 
 const email = "kaja.berg@outlook.com";
 

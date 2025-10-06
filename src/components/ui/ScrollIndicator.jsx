@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import useInView from "../../hooks/useInView";
 
-export default function ScrollTriangle() {
+export default function ScrollIndicator() {
   const { ref, isInView } = useInView({
     triggerOnce: false,
     threshold: 0.5,
