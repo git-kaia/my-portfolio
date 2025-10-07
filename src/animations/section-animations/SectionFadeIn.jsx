@@ -1,4 +1,4 @@
-// components/animations/SectionFadeIn.jsx
+// components/animations/section-animations/SectionFadeIn.jsx
 
 import { motion } from "framer-motion";
 import useInView from "../../hooks/useInView";
