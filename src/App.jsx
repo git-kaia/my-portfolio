@@ -18,8 +18,8 @@ function App() {
   return (
     <>
       <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
-        <Header className="sticky" />
-        <main className="overflow-y-auto">
+        <Header/>
+        <main>
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />
