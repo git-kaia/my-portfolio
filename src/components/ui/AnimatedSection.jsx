@@ -7,6 +7,8 @@ export default function AnimatedSection({
     className = "",
     motionStyle = {}, // Custom styles for motion div
     height = "h-[300vh]",
+    overlap = false,
+    headerPx = 80,
 }) {
     const ref = useRef(null);
 
@@ -17,7 +19,7 @@ export default function AnimatedSection({
     });
 
     // Default fade+scale
-    const defaultOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+    const defaultOpacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
     const defaultScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 1]);
 
     // Allow custm overrides
@@ -33,7 +35,7 @@ export default function AnimatedSection({
                 <motion.div
                     style={animatedStyle}
                     className={`w-full max-w-3xl mx-auto text-center p-8 ${className}`}
-                    >
+                >
                     {children}
                 </motion.div>
             </div>
