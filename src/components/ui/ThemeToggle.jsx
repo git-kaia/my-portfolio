@@ -35,11 +35,12 @@ export default function ThemeToggle() {
   }, []);
 
   return (
-    <button
+    <motion.button
+      type="button"
       onClick={toggleTheme}
       aria-label="Toggle Dark Mode"
       className="w-10 h-10 p-0 bg-transparent border-none"
-      animate={{}}
+      whileTap={{ scale: 0.95 }}
     >
       <AnimatePresence mode="wait">
         {isDark ? (
@@ -49,6 +50,7 @@ export default function ThemeToggle() {
             animate={{ opacity: 1, rotate: 0 }}
             exit={{ opacity: 0}}
             transition={{ duration: 0.4 }}
+            className="block"
           >
             <SunIcon className="max-w-full object-contain block" />
           </motion.div>
@@ -64,7 +66,7 @@ export default function ThemeToggle() {
           </motion.div>
         )}
       </AnimatePresence>
-    </button >
+    </motion.button >
   );
 }
 
