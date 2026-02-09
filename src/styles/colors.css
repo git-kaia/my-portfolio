@@ -10,11 +10,11 @@
 }
 
 .dark {
-  --textPrimary: #b0b3b7;
-  --textSecondary: #8a8a8a;
-  --bgPrimary: #000000;
-  --bgSecondary: #1e1e1f;
+  --textPrimary: #ffffff;
+  --textSecondary: #a073ba;
+  --bgPrimary: #070029;
+  --bgSecondary: #23013d;
   --accentPrimary: #ffffff;
   --accentSecondary: #fffffc;
-  --border: #444444;
+  --border: #000000;
 }

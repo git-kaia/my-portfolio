@@ -8,7 +8,11 @@ export default function MoonIcon({ className = "" }) {
 
   return (
 
-    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 775 775.63">
+    <svg 
+      className={className}
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 775 775.63">
+
       <defs>{pattern.defs}</defs>
 
       <path

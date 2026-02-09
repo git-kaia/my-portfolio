@@ -39,7 +39,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label="Toggle Dark Mode"
-      className="w-12 h-12 p-0 bg-transparent border-none"
+      className="w-20 h-20 p-0 bg-transparent border-none"
       whileTap={{ scale: 0.95 }}
     >
       <AnimatePresence mode="wait">
@@ -62,7 +62,7 @@ export default function ThemeToggle() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <MoonIcon className="object-contain block" />
+            <MoonIcon className="object-contain block w-16 h-16" />
           </motion.div>
         )}
       </AnimatePresence>
