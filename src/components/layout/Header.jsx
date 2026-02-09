@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header
       ref={ref}
-      className="sticky top-0 z-50 bg-[var(--bgSecondary)] shadow-md px-6 py-1 flex gap-6 items-center dark:shadow-none"
+      className="sticky top-0 z-50 bg-[var(--bgSecondary)] shadow-md px-6 py-4 flex gap-6 items-center dark:shadow-none"
     >
       <Navbar />
       <ThemeToggle />

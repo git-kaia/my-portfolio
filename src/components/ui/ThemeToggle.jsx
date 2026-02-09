@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import SunIcon from '../icons/SunIcon';
-import MoonIcon from '../icons/MoonIcon';
+import SunIcon from '../svg/SunIcon';
+import MoonIcon from '../svg/MoonIcon';
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(() =>
@@ -39,7 +39,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label="Toggle Dark Mode"
-      className="w-10 h-10 p-0 bg-transparent border-none"
+      className="w-12 h-12 p-0 bg-transparent border-none"
       whileTap={{ scale: 0.95 }}
     >
       <AnimatePresence mode="wait">
@@ -52,7 +52,7 @@ export default function ThemeToggle() {
             transition={{ duration: 0.4 }}
             className="block"
           >
-            <SunIcon className="max-w-full object-contain block" />
+            <SunIcon className="object-contain block" />
           </motion.div>
         ) : (
           <motion.div
@@ -62,7 +62,7 @@ export default function ThemeToggle() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <MoonIcon className="max-w-[80%] object-contain block" />
+            <MoonIcon className="object-contain block" />
           </motion.div>
         )}
       </AnimatePresence>

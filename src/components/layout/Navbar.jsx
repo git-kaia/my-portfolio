@@ -8,7 +8,7 @@ export default function Navbar() {
           to="/"
           end
           className={({ isActive }) =>
-            isActive ? "font-bold text-lg text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-lg"
+            isActive ? "font-bold text-xl text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-xl"
           }
         >
           Home
@@ -17,7 +17,7 @@ export default function Navbar() {
           to="/about"
           end
           className={({ isActive }) =>
-            isActive ? "font-bold text-lg text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-lg"
+            isActive ? "font-bold text-xl text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-xl"
           }
         >
           About
@@ -26,7 +26,7 @@ export default function Navbar() {
           to="/projects"
           end
           className={({ isActive }) =>
-            isActive ? "font-bold text-lg text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-lg"
+            isActive ? "font-bold text-xl text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-xl"
           }
         >
           Projects
@@ -35,7 +35,7 @@ export default function Navbar() {
           to="/contact"
           end
           className={({ isActive }) =>
-            isActive ? "font-bold text-lg text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-lg"
+            isActive ? "font-bold text-xl text-[var(--accentPrimary)] dark:text-[var(--accentPrimary)]" : "text-xl"
           }
         >
           Contact
