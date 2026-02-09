@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <header
       ref={ref}
-      className="sticky top-0 z-50 bg-[var(--bgSecondary)] shadow-md px-12 py-4"
+      className="sticky top-0 z-50 bg-[color:var(--bgSecondary)] shadow-md dark:shadow-lg px-12 py-4"
     >
       <div className="grid grid-cols-3 items-center">
         {/* Left slot (empty for now, or put logo/name later) */}

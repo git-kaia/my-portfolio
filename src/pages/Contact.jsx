@@ -5,7 +5,7 @@ import PageFadeTransition from "../animations/PageFadeTransition";
 import EmailIcon from "../components/svg/EmailIcon";
 import LinkedIn from "../components/svg/LinkedIn";
 import GitHub from "../components/svg/GitHub";
-import DownloadCvCard from "../components/layout/DownloadCvCard";
+import DownloadCvCard from "../components/cards/DownloadCvCard";
 
 const email = "kaja.berg@outlook.com";
 const linkedInUrl = "https://www.linkedin.com/in/kaja-emilie-berg-031792395/";
