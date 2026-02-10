@@ -23,7 +23,6 @@ a {
 
 body {
   min-width: 320px;
-  min-height: 100vh;
   background-color: var(--bgPrimary);
   color: var(--textPrimary);
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -36,10 +35,8 @@ h1, h2, h3 {
 
 p {
   max-width: 70ch;
-  padding: 1rem;
   letter-spacing: 0.09em;
 }
-
 
 button {
   border-radius: 8px;
@@ -59,15 +56,4 @@ button {
   :focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
-}
-
-
-// SVG styles
-
-.line {
-  fill: var(--accentPrimary);
-}
-
-.stripes {
-  fill: var(--accentSecondary);
 }

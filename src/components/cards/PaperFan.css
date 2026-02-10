@@ -1,0 +1,49 @@
+.paperfan {
+  position: relative;
+  width: 55em;
+  height: 35em;
+}
+
+.paperfan .paper {
+  position: absolute;
+  bottom: 0;
+  inset: 0;
+  background: var(--paperColor, var(--bgSecondary));
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+
+  /* Start hidden + rotated like your :before */
+  opacity: 0;
+  transform: translate(var(--x), var(--y)) rotate(0deg);
+}
+
+.paperfan .paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--paperColor, var(--accentSecondary));
+  z-index: -1;
+
+  transform-origin: bottom right;
+  transform: rotate(90deg);
+
+  transition: transform 700ms ease, opacity 500ms ease;
+}
+
+/* When visible: rotate the overlay in */
+.paperfan.is-visible .paper {
+  opacity: 1;
+  transform: translate(var(--x), var(--y)) rotate(var(--rot));
+  transition: transform 700ms ease, opacity 500ms ease;
+}
+
+.paperfan.is-visible .paper::before {
+  transform: rotate(0deg);
+}
+
+/* Optional: content layout if you put text inside top paper */
+.paperfan .paper > * {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+}
