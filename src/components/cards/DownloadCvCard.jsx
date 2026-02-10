@@ -1,4 +1,4 @@
-// components/DownloadCvCard.jsx
+// components/cards/DownloadCvCard.jsx
 export default function DownloadCvCard({ href = "/CV.pdf" }) {
   return (
     <a
