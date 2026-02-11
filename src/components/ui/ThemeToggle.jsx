@@ -52,7 +52,7 @@ export default function ThemeToggle() {
             transition={{ duration: 0.4 }}
             className="block"
           >
-            <SunIcon className="object-contain block" />
+            <SunIcon className="object-contain block stripe-animated-icon" />
           </motion.div>
         ) : (
           <motion.div
@@ -62,7 +62,7 @@ export default function ThemeToggle() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <MoonIcon className="object-contain block w-16 h-16" />
+            <MoonIcon className="object-contain block w-16 h-16 stripe-animated-icon" />
           </motion.div>
         )}
       </AnimatePresence>

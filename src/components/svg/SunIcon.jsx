@@ -7,11 +7,18 @@ export default function SunIcon({ className = "" }) {
 
   return (
     <svg
-      className={className}
+      className={`stripe-animated-icon ${className}`}
       id="Layer_2"
       data-name="Layer 2"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 775 775">
+      viewBox="0 0 775 775"
+      onMouseEnter={() => {
+        document.getElementById(`${pattern.id}-anim`)?.beginElement();
+      }}
+      onMouseLeave={() => {
+        document.getElementById(`${pattern.id}-anim`)?.endElement();
+      }}
+    >
 
       <defs>{pattern.defs}</defs>
 

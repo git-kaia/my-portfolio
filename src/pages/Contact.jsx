@@ -23,35 +23,35 @@ export default function Contact() {
         <div className="flex items-baseline justify-center gap-20">
           <div>
             <a
-              className="flex flex-col items-center justify-center gap-4 transition-colors"
+              className="flex flex-col items-center justify-center gap-4 transition-colors hover:scale-110"
               href={`mailto:${email}`}
             >
-              <EmailIcon className="w-20 object-contain" />
-              <h2>Email</h2>
+              <EmailIcon className="w-20 object-contain stripe-animated-icon" />
+              <h2 className="text-[var(--accentPrimary)]">Email</h2>
             </a>
           </div>
 
           <div>
             <a
-              className="flex flex-col items-center justify-center gap-4 transition-colors"
+              className="flex flex-col items-center justify-center gap-4 transition-colors hover:scale-110"
               href={githubUrl}
               target="_blank"
               rel="noreferrer"
             >
-              <GitHub className="w-16 object-contain" />
-              <h2>GitHub</h2>
+              <GitHub className="w-16 object-contain stripe-animated-icon" />
+              <h2 className="text-[var(--accentPrimary)]">GitHub</h2>
             </a>
           </div>
 
           <div>
             <a
-              className="flex flex-col place-items-center justify-center gap-4 transition-colors"
+              className="flex flex-col place-items-center justify-center gap-4 transition-colors hover:scale-110"
               href={linkedInUrl}
               target="_blank"
               rel="noreferrer"
             >
-              <LinkedIn className="w-16 object-contain" />
-              <h2>LinkedIn</h2>
+              <LinkedIn className="w-16 object-contain stripe-animated-icon" />
+              <h2 className="text-[var(--accentPrimary)]">LinkedIn</h2>
             </a>
           </div>
         </div>

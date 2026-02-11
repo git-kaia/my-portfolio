@@ -8,9 +8,15 @@ export default function EmailIcon({ className = "" }) {
 
     return (
         <svg
-            className={className}
+            className={`stripe-animated-icon ${className}`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 700 700"
+            onMouseEnter={() => {
+                document.getElementById(`${pattern.id}-anim`)?.beginElement();
+            }}
+            onMouseLeave={() => {
+                document.getElementById(`${pattern.id}-anim`)?.endElement();
+            }}
         >
             <defs>{pattern.defs}</defs>
 

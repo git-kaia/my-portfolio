@@ -29,6 +29,18 @@ export function StripePattern({
           height={stripe}
           fill={color}
         />
+
+        <animateTransform
+          id={`${id}-anim`}
+          attributeName="patternTransform"
+          type="translate"
+          from="0 0"
+          to={`0 ${tileH}`}
+          dur="0.7s"
+          repeatCount="indefinite"
+          begin="indefinite"
+          additive="sum"
+        />
       </pattern>
     ),
   };

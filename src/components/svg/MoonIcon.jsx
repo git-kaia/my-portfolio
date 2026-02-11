@@ -8,10 +8,17 @@ export default function MoonIcon({ className = "" }) {
 
   return (
 
-    <svg 
-      className={className}
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 775 775.63">
+    <svg
+      className={`stripe-animated-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 775 775.63"
+      onMouseEnter={() => {
+        document.getElementById(`${pattern.id}-anim`)?.beginElement();
+      }}
+      onMouseLeave={() => {
+        document.getElementById(`${pattern.id}-anim`)?.endElement();
+      }}
+    >
 
       <defs>{pattern.defs}</defs>
 

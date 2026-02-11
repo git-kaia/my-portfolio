@@ -25,7 +25,9 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 600;
   letter-spacing: 0.15rem;
 }
@@ -51,4 +53,17 @@ button :hover {
 button :focus,
 button :focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.stripe-animated-icon:hover pattern animateTransform {
+  animation-play-state: running;
+}
+
+@keyframes stripe-slide {
+  from {
+    --pattern-shift: 0px;
+  }
+  to {
+    --pattern-shift: var(--tileH);
+  }
 }/*# sourceMappingURL=index.css.map */
