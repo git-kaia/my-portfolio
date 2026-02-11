@@ -7,7 +7,6 @@ import EmailIcon from "../components/svg/EmailIcon";
 import LinkedIn from "../components/svg/LinkedIn";
 import GitHub from "../components/svg/GitHub";
 import DownloadCvCard from "../components/cards/DownloadCvCard";
-import Download from "../components/svg/Download";
 
 
 const email = "kaja.berg@outlook.com";
@@ -17,13 +16,15 @@ const githubUrl = "https://github.com/git-kaia";
 export default function Contact() {
   return (
     <PageFadeTransition>
-      <div className="flex align-center items-center min-h-[calc(100vh-var(--header-h))]">
-        <div className="p-10">
+      <div className="flex justify-center items-center gap-28 w-full min-h-[calc(100vh-var(--header-h))]">
+        <div>
           <PaperFan
             className='contact-socials'
+            width="40rem"
+            height="40rem"
             layers={[
-              { x: 0, y: -20, rot: 5, color: "var(--bgCardPrimary)", width: "40rem", height: "32rem" },
-              { x: 0, y: -2, rot: -2, color: "var(--bgSecondary)", width: "40rem", height: "32rem" },
+              { x: 0, y: -20, rot: 5, color: "var(--bgCardPrimary)", width: "35rem", height: "35rem" },
+              { x: 0, y: -2, rot: -2, color: "var(--bgSecondary)", width: "35rem", height: "35rem" },
             ]}
           >
 
@@ -71,11 +72,13 @@ export default function Contact() {
           </PaperFan>
         </div>
 
-        <div className="p-10">
+        <div>
           <PaperFan
             className='download-cv'
+            width="40rem"
+            height="40rem"
             layers={[
-              { x: 2, y: 10, rot: 6, color: "var(--bgSecondary)", width: "30rem", height: "32rem" },
+              { x: 2, y: 10, rot: 6, color: "var(--bgSecondary)", width: "35rem", height: "35rem" },
             ]}
           >
             <div className="flex flex-col items-center align-center gap-10">

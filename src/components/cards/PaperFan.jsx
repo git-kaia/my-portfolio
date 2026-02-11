@@ -5,7 +5,7 @@ import "./PaperFan.css";
 export default function PaperFan({
   className = "",
   layers = [],
-  width = "20rem",
+    width = "20rem",
   height = "28rem",
   children, // content for layers
 }) {
@@ -18,6 +18,11 @@ export default function PaperFan({
     <div
       ref={ref}
       className={`paperfan ${inView ? "is-visible" : ""} ${className}`}
+      style={{
+        "--fan-width": width,
+        "--fan-height": height,
+      }}
+
     >
       {layers.map((layer, i) => (
         <div

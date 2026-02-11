@@ -1,14 +1,12 @@
 .paperfan {
   position: relative;
-  width: 55em;
-  height: 35em;
+  width: var(--fan-width);
+  height: var(--fan-height);
 }
 
 .paperfan .paper {
   position: absolute;
   bottom: 0;
-  inset: 0;
-  background: var(--paperColor, var(--bgSecondary));
   box-shadow: var(--shadow-md);
   overflow: hidden;
   width: var(--width);
@@ -16,7 +14,6 @@
   background: var(--paperColor);
   transform: translateX(var(--x)) translateY(var(--y)) rotate(var(--rot));
   position: absolute;
-  /* Start hidden + rotated like your :before */
   opacity: 0;
   transform: translate(var(--x), var(--y)) rotate(0deg);
 }
@@ -24,7 +21,6 @@
 .paperfan .paper::before {
   content: "";
   position: absolute;
-  inset: 0;
   background: var(--paperColor, var(--accentSecondary));
   z-index: -1;
 

@@ -10,7 +10,7 @@ export default function Code({ className = "" }) {
         <svg
             className={className}
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1307.71 980.72"
+            viewBox="-10 -10 1400 1000"
         >
             <defs>{pattern.defs}</defs>
 
