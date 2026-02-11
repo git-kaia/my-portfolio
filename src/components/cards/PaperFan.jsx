@@ -4,13 +4,10 @@ import "./PaperFan.css";
 
 export default function PaperFan({
   className = "",
-  layers = [
-    { x: 70, y: 0, rot: 5, color: "var(--bgSecondary)" },
-    { x: 25, y: 10, rot:10, color: "var(--bgCardPrimary)" },
-    { x: -25, y: 10, rot: 6, color: "var(--bgCardSecondary)" },
-    { x: 0, y: 2, rot: 2, color: "var(--bgSecondary)" },
-  ],
-  children, // content on the top paper (optional)
+  layers = [],
+  width = "20rem",
+  height = "28rem",
+  children, // content for layers
 }) {
   const { ref, inView } = useInView({
     threshold: 0.25,
@@ -31,9 +28,12 @@ export default function PaperFan({
             "--y": `${layer.y}px`,
             "--rot": `${layer.rot}deg`,
             "--paperColor": layer.color,
+            "--width": `${layer.width || width}`,
+            "--height": `${layer.height || height}`,
             zIndex: i + 1,
           }}
         >
+          {layer.content}
           {i === layers.length - 1 ? children : null}
         </div>
       ))}

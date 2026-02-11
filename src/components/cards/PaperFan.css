@@ -11,7 +11,11 @@
   background: var(--paperColor, var(--bgSecondary));
   box-shadow: var(--shadow-md);
   overflow: hidden;
-
+  width: var(--width);
+  height: var(--height);
+  background: var(--paperColor);
+  transform: translateX(var(--x)) translateY(var(--y)) rotate(var(--rot));
+  position: absolute;
   /* Start hidden + rotated like your :before */
   opacity: 0;
   transform: translate(var(--x), var(--y)) rotate(0deg);
