@@ -24,7 +24,7 @@
   background: var(--paperColor, var(--accentSecondary));
   z-index: -1;
 
-  transform-origin: bottom right;
+  transform-origin: bottom center;
   transform: rotate(90deg);
 
   transition: transform 700ms ease, opacity 500ms ease;
