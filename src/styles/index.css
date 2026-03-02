@@ -36,6 +36,8 @@ p {
   max-width: 70ch;
   letter-spacing: 0.1em;
   @apply leading-[1.8];
+  @apply text-left;
+  font-size: large;
 }
 
 button {

@@ -4,6 +4,7 @@
   position: relative;
   width: var(--fan-width);
   height: var(--fan-height);
+  overflow: visible;
 }
 .paperfan .paper {
   position: absolute;

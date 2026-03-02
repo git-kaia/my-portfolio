@@ -61,7 +61,7 @@ export default function About() {
                   <h2 className="text-2xl text-[var(--textSecondary)] uppercase">
                     My Web Development Philosophy
                   </h2>
-                  <p className="mt-4 text-left">
+                  <p className="mt-4">
                     I believe that great web design is first and foremorst grounded in a
                     deep understanding of user needs and behaviours, combined with
                     appripriate technology choices tailored for each project. My goal is
@@ -97,8 +97,8 @@ export default function About() {
                   <h2 className="text-2xl text-[var(--textSecondary)] uppercase">
                     In My Free Time
                   </h2>
-                  <p className="mt-4 leading-relaxed text-left">
-                    When I'm not developting web-projects I spent time with my flock of birds.
+                  <p className="mt-4 leading-relaxed">
+                    When I'm not developing web-projects, I spend time with my flock of birds. Two budgies that I've had since 2023 and two cockatiels that got here as foster birds in need of a new home 2025.
                   </p>
                 </div>
               )

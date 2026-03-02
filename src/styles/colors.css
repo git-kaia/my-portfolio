@@ -18,11 +18,11 @@
 
 .dark {
   --textPrimary: #ffffff;
-  --textSecondary: #a073ba;
+  --textSecondary: #9b6a00;
   --bgPrimary: #1e0a22;
-  --bgSecondary: #36133a;
+  --bgSecondary: #402842;
   --bgCardPrimary: #9b6a00;
-  --bgCardSecondary: #e7aa00;
+  --bgCardSecondary: #9b6a00;
   --accentPrimary: #ffffff;
   --accentSecondary: #fffffc;
   --border: #444444;
