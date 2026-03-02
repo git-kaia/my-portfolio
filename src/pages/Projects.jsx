@@ -7,7 +7,7 @@ import ProjectCard from "../components/cards/ProjectCard";
 export default function Projects() {
   return (
     <PageFadeTransition>
-      <div>
+      <div className="overflow-hidden flex flex-col items-center justify-center gap-32 pb-10">
         <PaperFan
           className="projects-paper-fan flex items-center justify-center"
           width="100rem"

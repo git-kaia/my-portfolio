@@ -1,0 +1,38 @@
+.about-info {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2.5rem;
+    margin-inline: auto;
+    height: 100%;
+    overflow: hidden;
+
+    /* headline */
+    &__title {
+        font-size: 2.25rem;
+        /* text-4xl */
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        /* tracking-widest */
+        color: var(--accentPrimary);
+        margin: 0;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        /* gap-6 */
+    }
+
+    /* paragraph text */
+    &__text {
+        color: var(--textPrimary);
+    }
+
+}

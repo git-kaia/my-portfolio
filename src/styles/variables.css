@@ -14,12 +14,13 @@
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
 
+  /* Fonts */
+  --patrick-handwriting: "Patrick Hand", cursive;
 
   /* Polaroid Card Tokens */
   --polaroid-paper: #fffef7;
   --polaroid-ink: #1b1b1b;
   --polaroid-border: 1px solid rgba(0, 0, 0, 0.5);
-  --polaroid-handwriting: "Caveat", "Shadows Into Light", "Patrick Hand", cursive, system-ui, sans-serif;
 }
 
 .dark {

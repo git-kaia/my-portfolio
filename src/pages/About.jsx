@@ -1,16 +1,18 @@
 import PageFadeTransition from "../animations/PageFadeTransition";
 import ScrollIndicator from "../components/ui/ScrollIndicator";
 import PaperFan from "../components/ui/PaperFan";
+import AboutInfoCard from "../components/cards/AboutInfoCard";
 import PolaroidCard from "../components/cards/PolaroidCard";
 import ImgBudgies from "../assets/images/me-and-my-budgies.JPG";
 import ImgTrulte from "../assets/images/me-and-trulte.jpg";
 import ImgRipley from "../assets/images/ripley.jpg";
 import ImgTimmy from "../assets/images/timmy.jpg";
+import ImgMe from "../assets/images/kaja.jpg";
 
 export default function About() {
   return (
     <PageFadeTransition>
-      <div className="overflow-hidden flex flex-col items-center justify-center gap-40">
+      <div className="overflow-hidden flex flex-col items-center justify-center gap-32 pb-10">
         {/* ---------------- Scene 1 ---------------- */}
         <PaperFan
           className="about-scene-one flex items-center justify-center"
@@ -24,22 +26,35 @@ export default function About() {
               color: "var(--bgSecondary)",
               width: "50rem",
               height: "40rem",
+              padding: "6rem",
               content: (
-                <div className="flex flex-col items-center justify-center gap-20 h-full text-center max-w-3xl mx-auto px-4 overflow-hidden">
-                  <h1 className="text-4xl uppercase tracking-widest text-[var(--accentPrimary)]">
-                    About Me
-                  </h1>
-                  <p className="mt-4">
+                <AboutInfoCard
+                  title="About Me"
+                >
+                  <p>
                     Hello, I'm Kaja — a 2026 web development graduate based in Norway.
                     Feel free to scroll your way through my story!
                   </p>
-                  <div className="mt-4">
-                    <ScrollIndicator />
-                  </div>
-                </div>
+                  <ScrollIndicator />
+                </AboutInfoCard>
               ),
+            },
+            {
+              x: 800,
+              y: 300,
+              rot: -2,
+              color: "transparent",
+              shadow: "none",
+              content: (
+                <PolaroidCard
+                  src={ImgMe}
+                  alt="My profile picture"
+                  caption="Kaja, 2026 web development graduate"
+                />
+              )
             }
           ]}
+
         ></PaperFan>
 
         {/* ---------------- Scene 2 ---------------- */}
@@ -56,20 +71,21 @@ export default function About() {
               color: "var(--bgSecondary)",
               width: "50rem",
               height: "40rem",
+              padding: "6rem",
               content: (
-                <div className="flex flex-col items-center justify-center h-full text-center max-w-3xl mx-auto px-4 overflow-hidden gap-10">
-                  <h2 className="text-2xl text-[var(--textSecondary)] uppercase">
-                    My Web Development Philosophy
-                  </h2>
-                  <p className="mt-4">
+                <AboutInfoCard
+                  title="My Web Development Philosophy"
+                >
+                  <p> 
                     I believe that great web design is first and foremorst grounded in a
                     deep understanding of user needs and behaviours, combined with
-                    appripriate technology choices tailored for each project. My goal is
+                    appropriate technology choices tailored for each project. My goal is
                     to create engaging, intuitive, and accessible digital experiences for
                     users, and at the same time ensure structured, maintainable, and
                     scalable codebases for developers.
+                    
                   </p>
-                </div>
+                </AboutInfoCard>
               ),
             }
           ]}
@@ -92,15 +108,15 @@ export default function About() {
               color: "var(--bgSecondary)",
               width: "50rem",
               height: "40rem",
+              padding: "6rem",
               content: (
-                <div className="flex flex-col items-center justify-center h-full text-center max-w-3xl mx-auto px-4 overflow-hidden">
-                  <h2 className="text-2xl text-[var(--textSecondary)] uppercase">
-                    In My Free Time
-                  </h2>
-                  <p className="mt-4 leading-relaxed">
-                    When I'm not developing web-projects, I spend time with my flock of birds. Two budgies that I've had since 2023 and two cockatiels that got here as foster birds in need of a new home 2025.
+                <AboutInfoCard
+                  title="Beyond Coding"
+                >
+                  <p>
+                    When I'm not developing web-projects, I spend time with my flock of birds. Two budgies that I've had since 2023 and two cockatiels that got here as foster birds in need of a new home in 2025.
                   </p>
-                </div>
+                </AboutInfoCard>
               )
             },
             {
@@ -148,7 +164,7 @@ export default function About() {
               )
             },
             {
-              x: 0,
+              x: -100,
               y: 0,
               rot: -5,
               color: "transparent",
@@ -183,20 +199,19 @@ export default function About() {
               color: "var(--bgSecondary)",
               width: "50rem",
               height: "40rem",
+              padding: "6rem",
               content: (
-
-                <div className="flex flex-col items-center justify-center h-full text-center max-w-3xl mx-auto px-4 overflow-hidden">
-                  <h2 className="text-2xl text-[var(--textSecondary)] uppercase">
-                    My Projects
-                  </h2>
-                  <p className="mt-4 leading-relaxed text-left">
+                <AboutInfoCard
+                  title="My Projects"
+                >
+                  <p>
                     Throughout my studies and personal time, I've worked on a variety of
                     web projects. These range from small personal websites to more complex
                     applications. Each project has been an opportunity to learn and grow
                     as a developer, and I'm excited to continue building and sharing my
                     work with the world.
                   </p>
-                </div>
+                </AboutInfoCard>
               ),
             }
           ]}

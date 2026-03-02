@@ -10,7 +10,7 @@ export default function PaperFan({
   children, // content for layers
 }) {
   const { ref, inView } = useInView({
-    threshold: 0.25,
+    threshold: 0.5,
     triggerOnce: false, // animate again if scrolling back
   });
 
