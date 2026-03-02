@@ -1,7 +1,7 @@
 // pages/Projects.jsx
 import { Link } from "react-router-dom";
 import PageFadeTransition from "../animations/PageFadeTransition";
-import PaperFan from "../components/cards/PaperFan";
+import PaperFan from "../components/ui/PaperFan";
 import ProjectCard from "../components/cards/ProjectCard";
 
 export default function Projects() {

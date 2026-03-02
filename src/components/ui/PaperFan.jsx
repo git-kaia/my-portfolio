@@ -5,7 +5,7 @@ import "./PaperFan.css";
 export default function PaperFan({
   className = "",
   layers = [],
-    width = "20rem",
+  width = "20rem",
   height = "28rem",
   children, // content for layers
 }) {
@@ -32,9 +32,13 @@ export default function PaperFan({
             "--x": `${layer.x}px`,
             "--y": `${layer.y}px`,
             "--rot": `${layer.rot}deg`,
-            "--paperColor": layer.color,
+            "--paperColor": layer.color || "transparent",
+            "--paperShadow": layer.shadow !== undefined ? layer.shadow : undefined,
+            "--paperRadius": layer.radius || "0",
+            "--paperPadding": layer.padding || "0",
             "--width": `${layer.width || width}`,
             "--height": `${layer.height || height}`,
+            ...(layer.style || {}),
             zIndex: i + 1,
           }}
         >

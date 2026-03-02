@@ -34,7 +34,8 @@ h3 {
 
 p {
   max-width: 70ch;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
+  @apply leading-[1.8];
 }
 
 button {

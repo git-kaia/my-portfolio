@@ -1,0 +1,97 @@
+/* components/cards/PaperFan.scss */
+
+// Variables for timing and easing
+$enter-duration: 700ms;
+$fade-duration: 500ms;
+$ease-fly: cubic-bezier(0.22, 1, 0.36, 1);
+
+/* Small mixin to generate staggered delays */
+@mixin stagger($count: 5, $step: 60ms) {
+  @for $i from 1 through $count {
+    .paper:nth-child(#{$i}) {
+      transition-delay: $i * $step;
+    }
+  }
+}
+
+.paperfan {
+  position: relative;
+  width: var(--fan-width);
+  height: var(--fan-height);
+
+  .paper {
+    position: absolute;
+    bottom: 0;
+    width: var(--width);
+    height: var(--height);
+    background: var(--paperColor);
+    box-shadow: var(--paperShadow, var(--shadow-md));
+    border-radius: var(--paperRadius, 0rem);
+    padding: var(--paperPadding, 0);
+    overflow: hidden;
+
+    // Initial state: hidden and rotated to 0 (transition to target --rot on enter)
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) rotate(0deg);
+
+    transition:
+      transform $enter-duration $ease-fly,
+      opacity $fade-duration ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0; // make overlay visible
+      background: var(--paperColor, var(--accentSecondary));
+      z-index: -1;
+      transform-origin: bottom center;
+      transform: rotate(90deg);
+      transition:
+        transform $enter-duration $ease-fly,
+        opacity $fade-duration ease;
+    }
+
+    // Optional: any direct children get padding and stay above overlay
+    >* {
+      position: relative;
+      z-index: 1;
+      padding: 24px;
+    }
+  }
+
+  &.is-visible {
+    .paper {
+      opacity: 1;
+      transform: translate(var(--x), var(--y)) rotate(var(--rot));
+
+      &::before {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  // Subtle entrance cadence for the fan
+  @include stagger(5, 10ms);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .paperfan {
+
+    .paper,
+    .paper::before {
+      transition: none !important;
+      transform: none !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+/* Smaller screens */
+@media (max-width: 640px) {
+  .paperfan {
+    width: min(90vw, 22rem);
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+}

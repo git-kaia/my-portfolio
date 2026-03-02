@@ -1,7 +1,7 @@
 // pages/Home.jsx
 import { Link } from 'react-router-dom';
 import PageFadeTransition from "../animations/PageFadeTransition";
-import PaperFan from "../components/cards/PaperFan";
+import PaperFan from "../components/ui/PaperFan";
 import Code from "../components/svg/Code";
 
 export default function Home() {

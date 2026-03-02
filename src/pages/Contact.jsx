@@ -1,6 +1,6 @@
 // pages/Contact.jsx
 import PageFadeTransition from "../animations/PageFadeTransition";
-import PaperFan from "../components/cards/PaperFan";
+import PaperFan from "../components/ui/PaperFan";
 
 // Icons
 import EmailIcon from "../components/svg/EmailIcon";
