@@ -6,6 +6,7 @@
   display: inline-block;
   background-color: var(--polaroid-paper);
   box-shadow: var(--shadow-lg);
+  border: var(--polaroid-border);
   border-radius: 5px;
   padding: 0.75rem;
   display: flex;
@@ -31,8 +32,8 @@
     width: 100%;
     padding: 0.5rem;
     text-align: center;
-    color: var(--polaroid-ink);
-    font-family: var(--patrick-handwriting);
+    color: var(--ink-handwriting);
+    font-family: var(--font-handwriting);
     font-size: 1.1rem;
     line-height: 1.2;
     letter-spacing: 0.2px;

@@ -27,7 +27,7 @@ export default function PaperFan({
       {layers.map((layer, i) => (
         <div
           key={i}
-          className="paper"
+          className={`paper ${layer.className ?? ""}`}
           style={{
             "--x": `${layer.x}px`,
             "--y": `${layer.y}px`,

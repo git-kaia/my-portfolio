@@ -8,6 +8,7 @@ import ImgTrulte from "../assets/images/me-and-trulte.jpg";
 import ImgRipley from "../assets/images/ripley.jpg";
 import ImgTimmy from "../assets/images/timmy.jpg";
 import ImgMe from "../assets/images/kaja.jpg";
+import { a } from "framer-motion/client";
 
 export default function About() {
   return (
@@ -65,7 +66,7 @@ export default function About() {
           height="45rem"
           layers={[
             {
-              x: 0,
+              x: 200,
               y: 0,
               rot: 5,
               color: "var(--bgSecondary)",
@@ -76,17 +77,47 @@ export default function About() {
                 <AboutInfoCard
                   title="My Web Development Philosophy"
                 >
-                  <p> 
+                  <p>
                     I believe that great web design is first and foremorst grounded in a
                     deep understanding of user needs and behaviours, combined with
                     appropriate technology choices tailored for each project. My goal is
                     to create engaging, intuitive, and accessible digital experiences for
                     users, and at the same time ensure structured, maintainable, and
                     scalable codebases for developers.
-                    
+
                   </p>
                 </AboutInfoCard>
-              ),
+              )
+            },
+            {
+              x: -400,
+              y: -100,
+              rot: -20,
+              width: "20rem",
+              height: "20rem",
+              padding: "2rem",
+              color: "var(--bgCardPrimary)",
+              className: "about-info__hand",
+            },
+            {
+              x: -400,
+              y: -120,
+              rot: -2,
+              width: "20rem",
+              height: "20rem",
+              padding: "2rem",
+              color: "var(--bgCardSecondary)",
+              className: "about-info__hand about-info__zigzag",
+              content: (
+                <AboutInfoCard
+                >
+                  <p>
+                    "Any sufficiently advanced technology is indistinguishable from magic."
+                    <br />
+                    — Arthur C. Clarke
+                  </p>
+                </AboutInfoCard>
+              )
             }
           ]}
         ></PaperFan>
@@ -164,8 +195,8 @@ export default function About() {
               )
             },
             {
-              x: -100,
-              y: 0,
+              x: -200,
+              y: 100,
               rot: -5,
               color: "transparent",
               shadow: "none",
@@ -193,9 +224,9 @@ export default function About() {
           height="45rem"
           layers={[
             {
-              x: 0,
+              x: -400,
               y: 0,
-              rot: 2,
+              rot: 0,
               color: "var(--bgSecondary)",
               width: "50rem",
               height: "40rem",
@@ -212,7 +243,49 @@ export default function About() {
                     work with the world.
                   </p>
                 </AboutInfoCard>
-              ),
+              )
+            },
+            {
+              x: 400,
+              y: -20,
+              rot: -5,
+              width: "20rem",
+              height: "20rem",
+              padding: "2rem",
+              color: "var(--bgCardSecondary)",
+              className: "about-info__hand",
+              content: (
+                <a href="./ontact.jsx">
+                  <AboutInfoCard
+                  >
+                    <p>
+                      Contact me!
+                    </p>
+
+                  </AboutInfoCard>
+                </a>
+              )
+            },
+              {
+              x: 300,
+              y: -220,
+              rot: 2,
+              width: "20rem",
+              height: "20rem",
+              padding: "2rem",
+              color: "var(--bgCardSecondary)",
+              className: "about-info__hand",
+              content: (
+                <a href="./Projects.jsx">
+                  <AboutInfoCard
+                  >
+                    <p>
+                      View projects!
+                    </p>
+
+                  </AboutInfoCard>
+                </a>
+              )
             }
           ]}
         ></PaperFan >
