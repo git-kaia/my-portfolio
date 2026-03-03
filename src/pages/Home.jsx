@@ -12,7 +12,7 @@ export default function Home() {
           <PaperFan
             className='portfolio-front'
             width="48rem"
-            height="40rem"
+            height="36rem"
             layers={[
               { x: 70, y: 20, rot: 5, color: "var(--bgSecondary)", width: "48rem", height: "40rem" },
               { x: 25, y: 10, rot: 10, color: "var(--bgCardPrimary)", width: "48rem", height: "35rem" },
