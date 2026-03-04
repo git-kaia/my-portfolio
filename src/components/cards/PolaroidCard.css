@@ -31,11 +31,12 @@
 }
 .polaroid__caption {
   width: 100%;
-  padding: 0.5rem;
+  padding-top: 2rem;
   text-align: center;
   color: var(--ink-handwriting);
   font-family: var(--font-handwriting);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.2;
   letter-spacing: 0.2px;
+  font-weight: lighter;
 }/*# sourceMappingURL=PolaroidCard.css.map */

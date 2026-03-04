@@ -7,8 +7,9 @@ import ImgBudgies from "../assets/images/me-and-my-budgies.JPG";
 import ImgTrulte from "../assets/images/me-and-trulte.jpg";
 import ImgRipley from "../assets/images/ripley.jpg";
 import ImgTimmy from "../assets/images/timmy.jpg";
+import ImgGorm from "../assets/images/gorm.jpg";
 import ImgMe from "../assets/images/kaja.jpg";
-import { a } from "framer-motion/client";
+import ImgBw from "../assets/images/kaja-bw.JPG";
 
 export default function About() {
   return (
@@ -27,35 +28,36 @@ export default function About() {
               color: "var(--bgSecondary)",
               width: "50rem",
               height: "40rem",
-              padding: "6rem",
+              padding: "6rem 6rem 0 6rem",
               content: (
-                <AboutInfoCard
-                  title="About Me"
-                >
-                  <p>
-                    Hello, I'm Kaja — a 2026 web development graduate based in Norway.
-                    Feel free to scroll your way through my story!
+                <AboutInfoCard title="About Me">
+                  <p className="mb-10">
+                    Hello, I'm Kaja — a 2026 web development graduate based in
+                    Norway. Feel free to scroll your way through my story!
                   </p>
                   <ScrollIndicator />
                 </AboutInfoCard>
               ),
             },
             {
-              x: 800,
-              y: 300,
+              x: 500,
+              y: 0,
               rot: -2,
               color: "transparent",
+              width: "20rem",
+              height: "auto",
               shadow: "none",
               content: (
-                <PolaroidCard
-                  src={ImgMe}
-                  alt="My profile picture"
-                  caption="Kaja, 2026 web development graduate"
+                <img
+                  src={ImgBw}
+                  alt="Kaja Emilie Berg"
+                  className="about-photo w-full shadow-md"
+                  loading="lazy"
+                  decoding="async"
                 />
-              )
-            }
+              ),
+            },
           ]}
-
         ></PaperFan>
 
         {/* ---------------- Scene 2 ---------------- */}
@@ -74,20 +76,18 @@ export default function About() {
               height: "40rem",
               padding: "6rem",
               content: (
-                <AboutInfoCard
-                  title="My Web Development Philosophy"
-                >
+                <AboutInfoCard title="My Web Development Philosophy">
                   <p>
-                    I believe that great web design is first and foremorst grounded in a
-                    deep understanding of user needs and behaviours, combined with
-                    appropriate technology choices tailored for each project. My goal is
-                    to create engaging, intuitive, and accessible digital experiences for
-                    users, and at the same time ensure structured, maintainable, and
+                    I believe that great web design is first and foremorst
+                    grounded in a deep understanding of user needs and
+                    behaviours, combined with appropriate technology choices
+                    tailored for each project. My goal is to create engaging,
+                    intuitive, and accessible digital experiences for users, and
+                    at the same time ensure structured, maintainable, and
                     scalable codebases for developers.
-
                   </p>
                 </AboutInfoCard>
-              )
+              ),
             },
             {
               x: -400,
@@ -109,21 +109,18 @@ export default function About() {
               color: "var(--bgCardSecondary)",
               className: "about-info__hand about-info__zigzag",
               content: (
-                <AboutInfoCard
-                >
+                <AboutInfoCard>
                   <p>
-                    "Any sufficiently advanced technology is indistinguishable from magic."
+                    "Any sufficiently advanced technology is indistinguishable
+                    from magic."
                     <br />
                     — Arthur C. Clarke
                   </p>
                 </AboutInfoCard>
-              )
-            }
+              ),
+            },
           ]}
         ></PaperFan>
-
-
-
 
         {/* ---------------- Scene 3 ---------------- */}
 
@@ -141,14 +138,15 @@ export default function About() {
               height: "40rem",
               padding: "6rem",
               content: (
-                <AboutInfoCard
-                  title="Beyond Coding"
-                >
+                <AboutInfoCard title="Beyond Coding">
                   <p>
-                    When I'm not developing web-projects, I spend time with my flock of birds. Two budgies that I've had since 2023 and two cockatiels that got here as foster birds in need of a new home in 2025.
+                    When I'm not developing web-projects, I mostly spend time
+                    with my flock of birds. Two budgies that I've had since
+                    2023, and two cockatiels that became my foster birds in
+                    2025.
                   </p>
                 </AboutInfoCard>
-              )
+              ),
             },
             {
               x: 800,
@@ -157,16 +155,11 @@ export default function About() {
               color: "transparent",
               shadow: "none",
               content: (
-                <PolaroidCard
-                  src={ImgTimmy}
-                  alt="My budgie Timmy"
-                  caption=""
-                />
-              )
+                <PolaroidCard src={ImgTimmy} alt="My budgie Timmy" caption="" />
+              ),
             },
             {
-
-              x: 700,
+              x: 600,
               y: 500,
               rot: -1,
               color: "transparent",
@@ -177,11 +170,10 @@ export default function About() {
                   alt="My with my cockatiel Trulte"
                   caption=""
                 />
-              )
+              ),
             },
             {
-
-              x: 200,
+              x: 0,
               y: 550,
               rot: 1,
               color: "transparent",
@@ -192,7 +184,7 @@ export default function About() {
                   alt="My budgie Ripley"
                   caption=""
                 />
-              )
+              ),
             },
             {
               x: -200,
@@ -206,19 +198,28 @@ export default function About() {
                   alt="Me with my budgies Timmy & Ripley"
                   caption=""
                 />
-              )
-            }
+              ),
+            },
+            {
+              x: -250,
+              y: 400,
+              rot: -10,
+              color: "transparent",
+              shadow: "none",
+              content: (
+                <PolaroidCard
+                  src={ImgGorm}
+                  alt="Gorm the cockatiel"
+                  caption=""
+                />
+              ),
+            },
           ]}
-
-
         ></PaperFan>
-
-
 
         {/* ---------------- Scene 4 ---------------- */}
 
         <PaperFan
-
           className="about-scene-four flex items-center justify-center"
           width="55rem"
           height="45rem"
@@ -232,65 +233,67 @@ export default function About() {
               height: "40rem",
               padding: "6rem",
               content: (
-                <AboutInfoCard
-                  title="My Projects"
-                >
+                <AboutInfoCard title="Keep exploring">
                   <p>
-                    Throughout my studies and personal time, I've worked on a variety of
-                    web projects. These range from small personal websites to more complex
-                    applications. Each project has been an opportunity to learn and grow
-                    as a developer, and I'm excited to continue building and sharing my
-                    work with the world.
+                    The story doesn't end here, so I hope you explore my
+                    projects or get in touch with me. Meanwhile I keep moving
+                    towards the next summit.
                   </p>
                 </AboutInfoCard>
-              )
+              ),
             },
             {
-              x: 400,
-              y: -20,
+              x: 200,
+              y: -150,
               rot: -5,
-              width: "20rem",
-              height: "20rem",
-              padding: "2rem",
+              width: "16rem",
+              height: "16rem",
+              padding: "1rem",
               color: "var(--bgCardSecondary)",
               className: "about-info__hand",
               content: (
-                <a href="./ontact.jsx">
-                  <AboutInfoCard
-                  >
-                    <p>
-                      Contact me!
-                    </p>
-
+                <a href="/contact" className="block w-full h-full no-underline">
+                  <AboutInfoCard>
+                    <p className="text-2xl font-semibold">Contact me!</p>
                   </AboutInfoCard>
                 </a>
-              )
+              ),
             },
-              {
-              x: 300,
-              y: -220,
+            {
+              x: 100,
+              y: -350,
               rot: 2,
-              width: "20rem",
-              height: "20rem",
-              padding: "2rem",
+              width: "16rem",
+              height: "16rem",
+              padding: "1rem",
               color: "var(--bgCardSecondary)",
               className: "about-info__hand",
               content: (
-                <a href="./Projects.jsx">
-                  <AboutInfoCard
-                  >
-                    <p>
-                      View projects!
-                    </p>
-
+                <a href="/projects" className="block w-full h-full no-underline">
+                  <AboutInfoCard>
+                    <p className="text-2xl font-semibold">View projects...</p>
                   </AboutInfoCard>
                 </a>
-              )
-            }
+              ),
+            },
+            {
+              x: 900,
+              y: 300,
+              rot: -2,
+              color: "transparent",
+              shadow: "none",
+              style: { pointerEvents: "none" },
+              content: (
+                <PolaroidCard
+                  src={ImgMe}
+                  alt="Me hiking in the mountains"
+                  caption="See you at the summit?"
+                />
+              ),
+            },
           ]}
-        ></PaperFan >
+        ></PaperFan>
       </div>
-    </PageFadeTransition >
-
+    </PageFadeTransition>
   );
 }

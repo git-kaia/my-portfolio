@@ -5,7 +5,7 @@ export default function AboutInfoCard({
   title,
   children,
   className = "",
-  align = "center",       // "left" | "center"
+  align = "left",       // "left" | "center"
   size = "md",            // "sm" | "md" | "lg"
   shadow = "md",          // "none" | "sm" | "md" | "lg"
   radius = "lg",          // "sm" | "md" | "lg"
