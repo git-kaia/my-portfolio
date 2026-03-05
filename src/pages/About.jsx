@@ -17,7 +17,7 @@ export default function About() {
       <div className="overflow-hidden flex flex-col items-center justify-center gap-32 pb-10">
         {/* ---------------- Scene 1 ---------------- */}
         <PaperFan
-          className="about-scene-one flex items-center justify-center"
+          className="about-scene-one flex items-center justify-center min-h-[calc(100vh-var(--header-h))]"
           width="55rem"
           height="45rem"
           layers={[
@@ -63,7 +63,7 @@ export default function About() {
         {/* ---------------- Scene 2 ---------------- */}
 
         <PaperFan
-          className="about-scene-two flex items-center justify-center"
+          className="about-scene-two flex items-center justify-center min-h-[calc(100vh-var(--header-h))]"
           width="55rem"
           height="45rem"
           layers={[
@@ -125,7 +125,7 @@ export default function About() {
         {/* ---------------- Scene 3 ---------------- */}
 
         <PaperFan
-          className="about-scene-three flex items-center justify-center"
+          className="about-scene-three flex items-center justify-center min-h-[calc(100vh-var(--header-h))]"
           width="55rem"
           height="45rem"
           layers={[
@@ -220,7 +220,7 @@ export default function About() {
         {/* ---------------- Scene 4 ---------------- */}
 
         <PaperFan
-          className="about-scene-four flex items-center justify-center"
+          className="about-scene-four flex items-center justify-center min-h-[calc(100vh-var(--header-h))]"
           width="55rem"
           height="45rem"
           layers={[

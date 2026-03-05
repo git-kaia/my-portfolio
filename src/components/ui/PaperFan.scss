@@ -19,10 +19,13 @@ $ease-fly: cubic-bezier(0.22, 1, 0.36, 1);
   width: var(--fan-width);
   height: var(--fan-height);
   overflow: visible;
+  display: grid;
+  place-items: center;
 
   .paper {
     position: absolute;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
     width: var(--width);
     height: var(--height);
     background: var(--paperColor);
@@ -33,7 +36,7 @@ $ease-fly: cubic-bezier(0.22, 1, 0.36, 1);
 
     // Initial state: hidden and rotated to 0 (transition to target --rot on enter)
     opacity: 0;
-    transform: translate(var(--x), var(--y)) rotate(0deg);
+    transform: translate(-50%, -50%) translate(var(--x), var(--y)) rotate(0deg);
 
     transition:
       transform $enter-duration $ease-fly,
@@ -42,7 +45,6 @@ $ease-fly: cubic-bezier(0.22, 1, 0.36, 1);
     &::before {
       content: "";
       position: absolute;
-      inset: 0; // make overlay visible
       background: var(--paperColor, var(--accentSecondary));
       z-index: -1;
       transform-origin: bottom center;
@@ -53,7 +55,7 @@ $ease-fly: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     // Optional: any direct children get padding and stay above overlay
-    >* {
+    > * {
       position: relative;
       z-index: 1;
       padding: 24px;
@@ -63,7 +65,7 @@ $ease-fly: cubic-bezier(0.22, 1, 0.36, 1);
   &.is-visible {
     .paper {
       opacity: 1;
-      transform: translate(var(--x), var(--y)) rotate(var(--rot));
+      transform: translate(-50%, -50%) translate(var(--x), var(--y)) rotate(var(--rot));
 
       &::before {
         transform: rotate(0deg);
@@ -78,7 +80,6 @@ $ease-fly: cubic-bezier(0.22, 1, 0.36, 1);
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .paperfan {
-
     .paper,
     .paper::before {
       transition: none !important;

@@ -5,10 +5,13 @@
   width: var(--fan-width);
   height: var(--fan-height);
   overflow: visible;
+  display: grid;
+  place-items: center;
 }
 .paperfan .paper {
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
   width: var(--width);
   height: var(--height);
   background: var(--paperColor);
@@ -17,13 +20,12 @@
   padding: var(--paperPadding, 0);
   overflow: hidden;
   opacity: 0;
-  transform: translate(var(--x), var(--y)) rotate(0deg);
+  transform: translate(-50%, -50%) translate(var(--x), var(--y)) rotate(0deg);
   transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1), opacity 500ms ease;
 }
 .paperfan .paper::before {
   content: "";
   position: absolute;
-  inset: 0;
   background: var(--paperColor, var(--accentSecondary));
   z-index: -1;
   transform-origin: bottom center;
@@ -37,7 +39,7 @@
 }
 .paperfan.is-visible .paper {
   opacity: 1;
-  transform: translate(var(--x), var(--y)) rotate(var(--rot));
+  transform: translate(-50%, -50%) translate(var(--x), var(--y)) rotate(var(--rot));
 }
 .paperfan.is-visible .paper::before {
   transform: rotate(0deg);
