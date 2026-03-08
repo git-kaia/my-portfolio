@@ -14,7 +14,7 @@ import ImgBw from "../assets/images/kaja-bw.JPG";
 export default function About() {
   return (
     <PageFadeTransition>
-      <div className="overflow-hidden flex flex-col items-center justify-center gap-32 pb-10">
+      <div className="overflow-hidden flex flex-col items-center justify-center gap-10">
         {/* ---------------- Scene 1 ---------------- */}
         <PaperFan
           className="about-scene-one flex items-center justify-center min-h-[calc(100vh-var(--header-h))]"
@@ -244,7 +244,7 @@ export default function About() {
             },
             {
               x: 200,
-              y: -150,
+              y: 50,
               rot: -5,
               width: "16rem",
               height: "16rem",
@@ -261,7 +261,7 @@ export default function About() {
             },
             {
               x: 100,
-              y: -350,
+              y: -150,
               rot: 2,
               width: "16rem",
               height: "16rem",
@@ -271,14 +271,14 @@ export default function About() {
               content: (
                 <a href="/projects" className="block w-full h-full no-underline">
                   <AboutInfoCard>
-                    <p className="text-2xl font-semibold">View projects...</p>
+                    <p className="text-2xl font-semibold text">View projects...</p>
                   </AboutInfoCard>
                 </a>
               ),
             },
             {
               x: 900,
-              y: 300,
+              y: 200,
               rot: -2,
               color: "transparent",
               shadow: "none",

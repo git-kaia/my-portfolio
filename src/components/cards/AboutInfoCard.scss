@@ -32,6 +32,15 @@
     &__hand {
         font-family: var(--font-handwriting, "Patrick Hand", cursive);
         color: var(--ink-handwriting, #1b1b1b);
+
+        a {
+            color: var(--ink-handwriting, #1b1b1b);
+
+
+            :hover {
+                color: var(--ink-handwriting, #1b1b1b);
+            }
+        }
     }
 
 

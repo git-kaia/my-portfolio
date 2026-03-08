@@ -60,7 +60,7 @@ export default function PaperFan({
               "--width": `${layer.width || width}`,
               "--height": `${layer.height || height}`,
               ...(layer.style || {}),
-              zIndex, // ⬅️ use computed zIndex (not i + 1)
+              zIndex,
             }}
           >
             {layer.content}

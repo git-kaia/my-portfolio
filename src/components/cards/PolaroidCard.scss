@@ -19,11 +19,11 @@
     border: var(--polaroid-border);
     object-fit: cover;
     object-position: center;
-    filter: brightness(0.85) contrast(1.05);
+    filter: contrast(1.1);
 
 
     @at-root .dark & {
-      filter: brightness(0.6) contrast(1.1);
+      filter: brightness(0.9) contrast(1.2);
     }
   }
 
